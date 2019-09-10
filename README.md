@@ -17,10 +17,18 @@ ProcIm es un programa de edición que te permite aplicar diferentes filtros a tu
 
 * Mosaico
 
+## Comenzando :rocket:
+1. Dirigete a la carpeta src.
+
+2. Da click en project1.
+
+3. ¡Listo! Selecciona la imagen que quieras editar y el filtro que quieras aplicarle.
+
 ## Construido con 🛠️
 
 * [Delphi](https://www.embarcadero.com/es/products/delphi/starter) - Usado para crear el programa
 * [LaTeX](https://www.latex-project.org/) - Usado para elaborar el informe
+* [Lazarus](https://www.lazarus-ide.org/) - IDE utilizado
 
 ## Contribuyendo 🖇️
 
