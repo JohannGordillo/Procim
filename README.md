@@ -18,11 +18,15 @@ ProcIm es un programa de edición que te permite aplicar diferentes filtros a tu
 * Mosaico
 
 ## Comenzando :rocket:
-1. Dirigete a la carpeta src.
+1. Instale [Lazarus](https://www.lazarus-ide.org/) .
 
-2. Da click en project1.
+2. En la carpeta src/ de clic sobre project1.lpi.
 
-3. ¡Listo! Selecciona la imagen que quieras editar y el filtro que quieras aplicarle.
+3. Compile usando F9.
+
+4. Haga clic en project1 dentro de la carpeta src/.
+
+5. ¡Listo! Seleccione la imagen que quiera editar y el filtro que quiera aplicarle.
 
 ## Construido con 🛠️
 
