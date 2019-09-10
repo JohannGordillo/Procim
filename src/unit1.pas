@@ -68,7 +68,18 @@ end;
 
 // Procedimiento que describe el comportamiento del boton de filtro verde
 procedure TForm1.btnGreenClick(Sender: TObject);
+var
+  i: longint;
+  j: longint;
 begin
+  for i := 0 to (Image1.Picture.Bitmap.Canvas.Width - 1) do
+  begin
+    for j:=0 to (Image1.Picture.Bitmap.Canvas.Height - 1) do
+    begin
+      // Reemplaza el pixel con otro con la misma componente en verde, y cero en rojo y azul
+      Image1.Picture.Bitmap.Canvas.Pixels[i,j] :=   RGBToColor(0, Green(Image1.Picture.Bitmap.Canvas.Pixels[i,j]),0);
+    end;
+  end;
 end;
 
 // Procedimiento que describe el comportamiento del boton de filtro rojo
