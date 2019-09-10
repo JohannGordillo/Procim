@@ -120,12 +120,70 @@ end;
 // Procedimiento que recibe el rango de un segmento (submatriz) de la imagen cargada
 // obtiene el color promedio del segmento y se lo asigna a todos los pixeles en el
 procedure TForm1.MosaicoSegmento(X0 : longint; Y0 : longint; X1: longint; Y1: longint);
+var
+        promR: Integer;
+        promG: Integer;
+        promB: Integer;
+        i: longint;
+        j: longint;
 begin
+  promR := 0;
+  promG := 0;
+  promB := 0;
+  for i := X0 to X1 do
+  begin
+    for j:= Y0 to Y1 do
+    begin
+      promR := promR + Red(Image1.Picture.Bitmap.Canvas.Pixels[i,j]);
+      promG := promG + Green(Image1.Picture.Bitmap.Canvas.Pixels[i,j]);
+      promB := promB + Blue(Image1.Picture.Bitmap.Canvas.Pixels[i,j]);
+    end;
+  end;
+  promR := Round(promR/((X1-X0)*(Y1-Y0)));
+  promG := Round(promG/((X1-X0)*(Y1-Y0)));
+  promB := Round(promB/((X1-X0)*(Y1-Y0)));
+  for i := X0 to X1 do
+  begin
+    for j:= Y0 to Y1 do
+    begin
+      Image1.Picture.Bitmap.Canvas.Pixels[i,j] :=   RGBToColor(promR,promG,promB);
+    end;
+  end;
 end;
 
 // Procedimiento que describe el comportamiento del boton de filtro Mosaico
 procedure TForm1.btnMosaicoClick(Sender: TObject);
+var
+        n: Integer;
+        i: Integer;
+        j: Integer;
+        blockHeight: longint;
+        blockWidth: longint;
 begin
+  Try
+    // Pide al usuario introducen un numero n, que sera la dimension del mosaico (n x n)
+    // y valida la entrada
+    n := (StrToInt(InputBox('Introduce n',
+    'El mosaico tendra forma de n x n', '3')));
+    if n <= 0 then
+    begin
+       ShowMessage ('Numero invalido');
+       exit;
+    end;
+    // Divide la imagen en segmentos y manda llamara MosaicoSegmento para cada uno
+    blockHeight := round(Image1.Picture.Bitmap.Canvas.Height/n);
+    blockWidth := round(Image1.Picture.Bitmap.Canvas.Width/n);
+    for i := 0 to n - 1 do
+    begin
+      for j:= 0 to n - 1 do
+      begin
+        MosaicoSegmento(i*blockWidth,j*blockHeight,(i + 1)*blockWidth,(j + 1)*blockHeight);
+      end;
+    end;
+  except
+    On E : EConvertError do
+      ShowMessage ('Numero invalido');
+  end;
 end;
 
 end.
