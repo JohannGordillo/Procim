@@ -26,7 +26,7 @@ ProcIm es un programa de edición que te permite aplicar diferentes filtros a tu
 
 4. Haga clic en project1 dentro de la carpeta src/.
 
-t. ¡Listo! Seleccione la imagen que quiera editar y el filtro que quiera aplicarle.
+5. ¡Listo! Seleccione la imagen que quiera editar y el filtro que quiera aplicarle.
 
 ## Construido con 🛠️
 
