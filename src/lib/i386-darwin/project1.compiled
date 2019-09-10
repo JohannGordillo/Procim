@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/local/bin/ppc386" Date="1538326666"/>
+  <Params Value=" -MObjFPC -Scghi -CX -O3 -XX -k-framework -kCarbon -k-framework -kOpenGL -k-dylib_file -k/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib:/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib -l -vewnhibq &quot;-Fi/Users/jhovangallardo/Modelado/Tarea02/Git/Codigo Base/lib/i386-darwin&quot; -Fu/Developer/lazarus/lcl/units/i386-darwin/carbon -Fu/Developer/lazarus/lcl/units/i386-darwin -Fu/Developer/lazarus/components/lazutils/lib/i386-darwin -Fu/Developer/lazarus/packager/units/i386-darwin &quot;-Fu/Users/jhovangallardo/Modelado/Tarea02/Git/Codigo Base/&quot; &quot;-FU/Users/jhovangallardo/Modelado/Tarea02/Git/Codigo Base/lib/i386-darwin/&quot; &quot;-FE/Users/jhovangallardo/Modelado/Tarea02/Git/Codigo Base/&quot; &quot;-o/Users/jhovangallardo/Modelado/Tarea02/Git/Codigo Base/project1&quot; -dLCL -dLCLcarbon project1.lpr"/>
+</CONFIG>
